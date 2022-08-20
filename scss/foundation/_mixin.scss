@@ -1,0 +1,10 @@
+@forward '../foundation/variable';
+@use '../foundation/variable'as v;
+
+
+// メディアクエリー(SP)
+@mixin mq-down($breakpoint: sp) {
+  @media #{map-get(v.$breakpoint-down, $breakpoint)} {
+    @content
+  }
+}

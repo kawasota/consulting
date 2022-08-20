@@ -1,0 +1,192 @@
+@forward '../../foundation/variable';
+@use '../../foundation/variable' as v;
+
+@forward '../../utility/length';
+@use '../../utility/length'as l;
+
+@forward '../../foundation/mixin';
+@use '../../foundation/mixin' as m;
+
+
+.company {
+  background: v.$color-company-bg;
+  padding: l.lg_a_2(110) 0 l.lg_a_2(240) 0;
+
+  @include m.mq-down('sp')   {
+    padding-top: l.lg_b(96);
+    padding-bottom: l.lg_b(55);
+  }
+
+  &-container {
+    width: l.lg_a_2(1004);
+    margin: 0 auto;
+
+    @include m.mq-down('sp') {
+      width: l.lg_b(330);
+    }
+  }
+
+    &-heading {
+      @include m.mq-down('sp') {
+        letter-spacing: 0;
+      }
+    }
+
+    &-table-container {
+      margin-top: l.lg_a_2(34);
+      background: v.$color-company-table-bg;
+      width: min(calc( 37.8% + 50vw), 1019px);
+      // width: calc( 37.8% + 50vw);
+      padding: l.lg_a_2(109)  0 l.lg_a_2(67) 0;
+      padding-left: l.lg_a_2(123);
+
+      @include m.mq-down('sp') {
+        margin-top: l.lg_b(23);
+        padding: l.lg_b(36) 0 l.lg_b(41.5) l.lg_b(22.5);
+        width: calc(43.4% + 50vw);
+      }
+    }
+
+      &-info {
+        font-size: v.fs_a(21);
+        font-family: v.$font_a;
+        font-weight: bold;
+        color: v.$color-company-table-item;
+
+        @include m.mq-down('sp') {
+          width: calc(41.5% + 50vw);
+        }
+
+          &-item {
+            width: l.lg_a_2(170.77);
+            display: inline-block;
+            text-align: right;
+            letter-spacing: 0.04em;
+            padding-bottom: 3.4%;
+            border-bottom: 1px solid v.$color-company-table-border;
+
+            @include m.mq-down('sp') {
+              font-size: v.fs_b(16);
+              padding-bottom: 5%;
+              width: 18%;
+              line-height: 1.5;
+              
+              &_a {
+                position: relative;
+                top: l.lg_b(-0.2);
+                left: l.lg_b(1);
+              }
+
+              &_b {
+                position: relative;
+                top: l.lg_b(-5.5);
+                left:  l.lg_b(1);
+                padding-bottom: 4.8%;
+              }
+
+              &_c {
+                position: relative;
+                top: l.lg_b(-3);
+                left: l.lg_b(2);
+                padding-bottom: 8.6%;
+              }
+
+              &_d {
+                position: relative;
+                top: l.lg_b(11);
+                left: l.lg_b(2);
+                padding-bottom: 10.1%;
+              }
+
+            }
+
+            &_b, &_c, &_d { 
+              padding-top: 3.4%;
+            }
+
+            &_e {
+              border: none;
+              position: relative;
+              top: max(l.lg_a(-81), -81px);
+
+              @include m.mq-down('sp') {
+                position: relative;
+                top: l.lg_b(1.5);
+                left: l.lg_b(2);
+                padding-bottom: 5%;
+              }
+
+            }
+
+            &-br-sp {
+              display: none;
+
+              @include m.mq-down('md') {
+                display: none;
+              }
+             
+              @include m.mq-down('sp') {
+                display: block;
+              }
+            }
+          }
+
+          &-desc {
+            width: l.lg_a_2(700.99);
+            margin-left: l.lg_a_2(23.73);
+            display: inline-block;
+            letter-spacing: 0.04em;
+            padding-bottom: 3.4%;
+            border-bottom: 1px solid v.$color-company-table-border;
+
+            @include m.mq-down('sp') {
+              font-size: v.fs_b(16);
+              padding-bottom: 9.9%;
+              width: 74%;
+              margin-left: 2.5%;
+              position: relative;
+              top: l.lg_b(-12);
+              left: l.lg_b(3);
+
+              &_b {
+                position: relative;
+                top: l.lg_b(-16);
+                padding-bottom: 9.2%;
+              }
+
+              &_c {
+                position: relative;
+                top: l.lg_b(-2.5);
+                left: l.lg_b(3);
+                padding-bottom: 9.6%;
+              }
+
+              &_d {
+                position: relative;
+                top: l.lg_b(11);
+                left: l.lg_b(2);
+                padding-bottom: 11.3%;
+              }
+
+            }
+
+            &_b, &_c, &_d { 
+              padding-top: 3.4%;
+            }
+
+            &_e {
+              border: none;
+              line-height: 1.96;
+              padding-top: 2.2%;
+
+              @include m.mq-down('sp') {
+                position: relative;
+                top: l.lg_b(29);
+                left: l.lg_b(3);
+                line-height: 1.62;
+              }
+
+            }
+          }
+      }
+}

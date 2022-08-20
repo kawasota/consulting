@@ -1,0 +1,186 @@
+// * Font * //
+// * Color * //
+// * Easing * //
+// * Media Query * //
+
+
+////////////// Font ////////////// 
+
+// - Font A
+$font_a: YuGothic, "Yu Gothic", Meiryo, sans-serif;
+
+// - Font B
+$font_b: 'Montserrat', sans-serif;
+
+// - Font C
+$font_c: din-condensed, sans-serif;
+
+// - Font D
+$font_d: neue-haas-unica, sans-serif;
+
+
+// Font size patarn A
+@function fs_a($value) {
+  $value_var: #{ 100 / 1280 * $value } + vw;
+  $value_max: $value + px;
+  @return min(#{$value_var},#{$value_max});
+}
+
+// Font size patarn B
+@function fs_b($value) {
+  $value_var: #{ 100 / 375 * $value } + vw;
+  @return #{$value_var};
+}
+
+
+
+////////////// Color ////////////// 
+
+// Palette
+$palette-white: #FFFFFF;
+$palette-gallery: #F0F0F0;
+$palette-jellybean: #2A84AC;
+$palette-jellybean_b: rgba(42, 132, 172, 0.38);
+$palette-mineshaft: #222222;
+$palette-mineshaft_b: #333333;
+$palette-mineshaft_c: #262626;
+$palete-black: #000000;
+$palette-mustard: #FEE757;
+$palette-supernova: #FBCC07;
+$palette-supernova_b: #FECF07;
+$palette-portgore: #322153;
+$palette-wildsand: #F5F5F5;
+$palette-alto: #D0D0D0;
+$palette-alto_b: #DDDDDD;
+$palette-amour: #F8E5EA;
+$palette-gray: #808080;
+$palette-silver: #C4C4C4;
+$palette-dovegray: #707070;
+$palette-thunder: #221D1D;
+$palette-amour: #f8e5ea;
+
+// Color of section
+
+// common
+$color-heading: $palette-mustard;
+$color-bgline: $palette-gallery;
+
+
+// -- index.html
+// - top
+$color-top-logo: $palete-black;
+$color-top-nav: $palette-mineshaft;
+$color-top-nav-open: $palette-white;
+$color-top-nav-open-bg: $palette-mineshaft;
+$color-top-nav-open-menu: $palette-white;
+$color-top-nav-btn: $palette-dovegray;
+$color-top-nav-btn-open: $palette-white;
+$color-top-mail-btn: $palette-mineshaft;
+$color-top-mail-txt: $palette-white;
+$color-top-mail-btn-open: $palette-white;
+$color-top-mail-txt-open: $palete-black;
+$color-top-copyright: $palette-mineshaft;
+$color-top-arrow: $palette-mineshaft;
+$color-top-bg: $palette-jellybean;
+$color-top-firstcopy: $palette-white;
+$color-top-firstcopy-outline: $palete-black;
+$color-top-firstcopy_sp: $palette-mineshaft;
+$color-top-lattercopy: $palette-mineshaft;
+$color-top-lattercopy_sp: $palette-white;
+$color-top-lattercopy_sp-outline: $palete-black;
+$color-top-service-outline: $palette-mineshaft;
+
+// - point
+$color-point-bg:  $palette-jellybean_b;
+$color-point-bg-txt: $palette-jellybean;
+$color-point-heading-desc: $palette-mineshaft;
+$color-point-feature: $palette-mineshaft_c;
+$color-point-desc: $palette-mineshaft;
+$color-point-desc-deco: $palette-amour;
+$color-point-whatweare: $palette-mineshaft;
+$color-point-whatweare-deco: $palette-mineshaft;
+
+// - service
+$color-service-intro: $palette-mineshaft;
+$color-service-intro-desc: $palette-mineshaft;
+$color-service-type: $palette-mineshaft_c;
+$color-service-type-item: $palette-mineshaft;
+$color-service-result: $palette-supernova;
+$color-service-result-heading: $palette-mineshaft;
+$color-service-result-desc: $palette-mineshaft;
+
+// - flow
+$color-flow-bg: $palette-jellybean;
+$color-flow-heading-desc: $palette-mustard;
+$color-flow-step01-bg: $palette-white;
+$color-flow-step02-bg: $palette-wildsand;
+$color-flow-step03-bg: $palette-alto_b;
+$color-flow-step04-bg: $palette-alto;
+$color-flow-step-outline: $palette-mineshaft;
+$color-flow-step-item: $palette-mineshaft;
+$color-flow-caption: $palette-mineshaft;
+
+// - member
+$color-member-bg: $palette-jellybean;
+$color-member-heading-desc: $palette-mustard;
+$color-member-position: $palette-white;
+$color-member-name:  $palette-white;
+$color-member-desc:  $palette-white;
+$color-member-caption: $palette-white;
+
+// - faq
+$color-faq-heading-desc: $palette-mineshaft;
+$color-faq-icon: $palette-mineshaft;
+$color-faq-question-open: $palette-dovegray;
+$color-faq-item: $palette-mineshaft;
+$color-faq-item-border: $palette-mineshaft_b;
+$color-faq-question-bg: $palette-gallery;
+$color-faq-btn: $palette-mineshaft;
+
+// - contact
+$color-contact-bg: $palette-jellybean;
+$color-contact-heading-desc: $palette-mustard;
+$color-contact-form-outline: $palette-mineshaft_b;
+$color-contact-form-outline-focus: $palette-gallery;
+$color-contact-form-placeholder: $palette-gray;
+$color-contact-form-input-txt: $palette-mineshaft;
+$color-contact-btn: $palette-supernova_b;
+$color-contact-btn-txt: $palette-mineshaft;
+$color-contact-arrow: $palette-white;
+
+// - company
+$color-company-bg: $palette-jellybean;
+$color-company-table-bg: $palette-white;
+$color-company-table-item: $palette-mineshaft;
+$color-company-table-border: $palette-silver;
+
+// - footer
+$color-footer-bg: $palette-mineshaft;
+$color-footer-copyright: $palette-white;
+$color-footer-scrollnav: $palette-white;
+
+
+
+// -- thanks.html
+$color-thanks-btn_a: $palette-white;
+$color-thanks-btn_b:  $palete-black;
+$color-thanks-en:  $palette-jellybean;
+
+
+
+//////////////  Easing //////////////
+
+$easeing_a: cubic-bezier(.19, 1, .22, 1);
+$easeing_b: cubic-bezier(0.215, 0.61,  0.355, 1);
+$easeing_c: cubic-bezier(0.165, 0.84,  0.44, 1);
+
+
+
+////////////// Media Query ////////////// 
+
+$breakpoint-down: (
+"sp_e": "(max-width: 296px)", 
+"sp": "(max-width: 690px)",
+"md": "(max-width: 920px)",
+);
+

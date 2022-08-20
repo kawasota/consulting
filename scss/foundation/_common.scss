@@ -1,0 +1,62 @@
+@forward '../foundation/variable';
+@use '../foundation/variable' as v;
+
+@forward '../foundation/mixin';
+@use '../foundation/mixin' as m;
+
+@forward '../utility/length';
+@use '../utility/length'as l;
+
+
+/* common */
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+  max-height: 1052px;
+  object-fit: cover;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  vertical-align: middle;
+  text-align: inherit;
+  font: inherit;
+  appearance: none;
+}
+
+.heading {
+  font-size: v.fs_a(60);
+  font-family: v.$font_b;
+  color: v.$color-heading;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+
+  @include m.mq-down('sp') {
+    font-size: v.fs_b(32);
+  }
+}
+
+@include m.mq-down('sp') {
+  .none {
+    display: none;
+  }
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}

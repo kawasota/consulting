@@ -1,0 +1,196 @@
+@forward '../../foundation/variable';
+@use '../../foundation/variable' as v;
+
+@forward '../../utility/length';
+@use '../../utility/length'as l;
+
+@forward '../../foundation/mixin';
+@use '../../foundation/mixin' as m;
+
+
+.contact {
+  background: v.$color-contact-bg;
+  margin-top: l.lg_a_2(259);
+  padding-bottom:  l.lg_a_2(120);
+
+  @include  m.mq-down('sp') {
+    margin-top: 0;
+  }
+
+  &-container {
+    width: l.lg_a_2(1004);
+    margin: 0 auto;
+    padding-top: l.lg_a_2(179);
+    position: relative;
+
+    @include  m.mq-down('sp') {
+      width: l.lg_b(330);
+      padding-top: l.lg_b(63);
+    }
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: l.lg_a_2(15.5);
+      border: l.lg_a_2(0.05) solid v.$color-contact-arrow;
+      right: -12.7%;
+      top: 60.4%;
+      transform: rotate(45deg);
+
+      @include  m.mq-down('sp') {
+        content: none;
+      }
+    }
+
+    &:after {
+      top: 61.4%;
+      transform: rotate(135deg);
+    }
+  }
+
+    &-heading {
+      @include  m.mq-down('sp') {
+        letter-spacing: 0;
+        margin-left: l.lg_b(3);
+      }
+    }
+
+    &-heading-desc {
+      font-size: v.fs_a(20);
+      font-weight: bold;
+      color: v.$color-contact-heading-desc;
+      font-family: v.$font_a;
+      letter-spacing: 0.07em;
+      padding-top: l.lg_a_2(12);
+
+      @include  m.mq-down('sp') {
+        font-size: v.fs_b(14);
+        margin-top: l.lg_b(14);
+        letter-spacing: 0.12em;
+        margin-left: l.lg_b(1);
+      }
+    }
+
+    &-form {
+      margin-top: l.lg_a_2(62);
+
+      @include  m.mq-down('sp') {
+        margin-top: l.lg_b(40);
+      }
+
+            &-item_a, &-item_b  {
+              font-size: v.fs_a(18);
+              font-weight: bold;
+              font-family: v.$font_d;
+              outline: 0;
+              position: relative;
+
+              @include  m.mq-down('sp') {
+                font-size: v.fs_b(16);
+              }
+
+            &:focus {
+              border-color: v.$color-contact-form-outline-focus;
+            }
+
+            &:not(:placeholder-shown)  {
+              border-color: v.$color-contact-form-outline-focus;
+              color: v.$color-contact-form-input-txt;
+              letter-spacing: 0.08em;
+            }
+            }
+
+            &-item_a {
+              width: 65.1%;
+              padding: 1.9% 0 2.1% 1.5%;
+              margin-bottom: 1.59%;
+              border: l.lg_a(1) solid v.$color-contact-form-outline;
+
+              @include  m.mq-down('sp') {
+                width: 94.3%;
+                padding: 5.5% .7% 4.9% 4.7%;
+                margin-bottom: 4.8%;
+            
+              }
+
+            }
+
+            &-item_b {
+              width: 98.3%;
+              padding: 1.6% 0 23% 1.5%;
+              margin-top: 0.5%;
+              border: l.lg_a(1) solid v.$color-contact-form-outline;
+              resize: none;
+
+              @include  m.mq-down('sp') {
+                padding: 6% 0 61% 4%;
+                width: 95.5%;
+                margin-top: 1.2%;
+              }
+
+            }
+
+            ::placeholder {
+              position: absolute;
+              top: 27%;
+              left: 2.8%;
+              letter-spacing: 0.11em;
+              color: v.$color-contact-form-placeholder;
+              transition: .2s;
+
+              @include  m.mq-down('sp') {
+                top: 30.8%;
+                left: 5.82%;
+              }
+            }
+
+            #inquiry::placeholder {
+              position: absolute;
+              top: 4.8%;
+              left: 1.82%;
+
+              @include  m.mq-down('sp') {
+                top: 7.8%;
+                left: 5.82%;
+              }
+            }
+
+          &-send_btn {
+            font-size: v.fs_a(24);
+            font-weight: bold;
+            color: v.$color-contact-btn-txt;
+            font-family: v.$font_c;
+            background: v.$color-contact-btn;
+            border: none;
+            margin-top: l.lg_a_2(38);
+            border-radius: l.lg_a_2(80);
+            padding: 3.3% 43.5% 3.2% 46.4%;
+            letter-spacing: 1.1em;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover {
+              box-shadow: 0 0.3em 0 darken(v.$color-contact-btn, 35%);
+              transform: translateY(-0.3em);
+            }
+
+            &:active {
+              box-shadow: none;
+              transform: translateY(0.3em);
+            }
+
+            @include  m.mq-down('sp') {
+              font-size: v.fs_b(21);
+              margin-top: l.lg_b(19);
+              padding: 4.5% 41% 4% 42.9%;
+              letter-spacing: 0.25em;
+              border-radius: l.lg_b(79);
+            }
+          }
+    }
+}
+
+:focus::placeholder { 
+  opacity: 0.3;
+} 

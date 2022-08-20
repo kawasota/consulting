@@ -1,0 +1,26 @@
+// Length patarn a (1280px)
+@function lg_a($value) {
+  $value_var: #{ 100 / 1280 * $value} + vw ;
+  @return #{$value_var};
+}
+
+@function lg_a_2($value) {
+  $value_var: #{ 100 / 1280 * $value } + vw;
+  $value_max: $value + px;
+  @return min(#{$value_var},#{$value_max});
+}
+
+
+// Length patarn b (541px)
+@function lg_b($value) {
+  $value_var: #{ 100 / 375 * $value} + vw ;
+  @return #{$value_var};
+}
+
+@function lg_b_2($value) {
+  $value_var: #{ 100 / 375 * $value} + vw ;
+  $value_max: $value + px;
+  @return min(#{$value_var},#{$value_max});
+}
+
+
